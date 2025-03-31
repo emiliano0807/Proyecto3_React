@@ -39,8 +39,10 @@ const Home = () => {
 
         {/* Información personal */}
         <div className="profile-info">
-          <h1>¡Hola! Soy [Tu Nombre]</h1>
-          <p>Desarrollador Web | Ingeniero de Software</p>
+          <h1>¡Hola! Soy Emilino Rivera Facio</h1>
+          <p>Soy ingeniero en sistemas actualmenete soy alumno de sexto semestre de la carrera
+            Del tecnologico de Estudios Superiores de Jilotepec.
+          </p>
         </div>
       </div>
     </div>

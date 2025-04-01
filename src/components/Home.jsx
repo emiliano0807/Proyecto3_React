@@ -41,7 +41,8 @@ const Home = () => {
         <div className="profile-info">
           <h1>¡Hola! Soy Emilino Rivera Facio</h1>
           <p>Soy ingeniero en sistemas actualmenete soy alumno de sexto semestre de la carrera
-            Del tecnologico de Estudios Superiores de Jilotepec.
+            Del tecnologico de Estudios Superiores de Jilotepec. Me gusta aprender nuevas tecnologias y 
+            mejorar mis habilidades en programacion
           </p>
         </div>
       </div>

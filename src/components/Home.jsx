@@ -41,8 +41,14 @@ const Home = () => {
         <div className="profile-info">
           <h1>¡Hola! Soy Emilino Rivera Facio</h1>
           <p>Soy ingeniero en sistemas actualmenete soy alumno de sexto semestre de la carrera
-            Del tecnologico de Estudios Superiores de Jilotepec. Me gusta aprender nuevas tecnologias y 
-            mejorar mis habilidades en programacion. Actualmente estoy aprendiendo React y Node.js.
+            del tecnologico de Estudios Superiores de Jilotepec.
+          </p> 
+          <p>  
+            Me gusta aprender nuevas tecnologias y mejorar mis habilidades en programacion. 
+            Actualmente estoy aprendiendo React y Node.js.
+          </p>
+          <p>
+            Me gusta todo releacionado a la tecnologia, la programacion y el desarrollo web.
           </p>
         </div>
       </div>

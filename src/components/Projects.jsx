@@ -1,8 +1,7 @@
 import React from 'react';
 
 const projects = [
-    { title: "Proyecto 1", description: "Descripción del Proyecto 1" },
-    { title: "Proyecto 2", description: "Descripción del Proyecto 2" }
+    { title: "Proyecto Agua", description: "Proyecto en produccion para la administracion de usuarios del servicio del agua mi pueblo" },
 ];
 
 const Projects = () => {

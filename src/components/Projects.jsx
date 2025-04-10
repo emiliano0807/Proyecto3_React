@@ -2,6 +2,7 @@ import React from 'react';
 
 const projects = [
     { title: "Proyecto Agua", description: "Proyecto en produccion para la administracion de usuarios del servicio del agua mi pueblo" },
+    { title: "Memorama", description: "Proyecto en react para familiarizzarnos con el lenguaje" },
 ];
 
 const Projects = () => {

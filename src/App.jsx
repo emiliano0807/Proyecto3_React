@@ -1,21 +1,27 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import React from "react";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import About from "./components/About"; // <--- 1. Importar
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import "./styles/vars.css";
 
-const App = () => {
+function App() {
   return (
-    <Router>
+    <div className="app-wrapper">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+      
+      <main className="main-content">
+        <Home />
+        <About /> {/* <--- 2. Agregar aquí */}
+        <Projects />
+        <Contact />
+      </main>
+
+      <Footer />
+    </div>
   );
-};
+}
 
 export default App;

@@ -1,0 +1,114 @@
+@import "../styles/vars.css";
+
+.projects-container {
+  padding: calc(var(--space-xl) + 12px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects-container h2 {
+  font-size: var(--font-size-xl);
+  text-align: center;
+  margin-bottom: var(--space-l);
+  color: var(--text-color);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Mejora responsiva automática */
+  gap: 24px;
+}
+
+.project-card {
+  background: var(--card-bg);
+  padding: 24px;
+  border-radius: var(--radius);
+  
+  /* CAMBIO 1: Definición clara de bordes y sombra inicial */
+  border: 1px solid var(--border-color); 
+  box-shadow: var(--shadow-sm);
+  
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 200px;
+  
+  /* CAMBIO 2: Preparamos la animación suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden; /* Mantiene todo contenido dentro de los bordes redondos */
+}
+
+/* CAMBIO 3: El efecto Hover (Levitación) */
+.project-card:hover {
+  transform: translateY(-8px); /* Sube 8 pixeles */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Sombra más fuerte y difusa */
+  border-color: rgba(225, 108, 255, 0.4); /* El borde se pinta sutilmente de tu color primario */
+}
+
+/* Títulos y textos */
+.project-card h3 { 
+  color: var(--primary-color); 
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.project-card p { 
+  color: var(--text-color); 
+  line-height: 1.6;
+  flex: 1; /* Empuja los botones hacia abajo */
+  opacity: 0.9;
+}
+
+/* Etiquetas de tecnología */
+.project-meta { 
+  display: flex; 
+  gap: 8px; 
+  flex-wrap: wrap; 
+  margin-top: 8px;
+}
+
+.pill {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  background: var(--soft-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  color: var(--muted-color);
+  font-weight: 500;
+}
+
+/* Área de botones */
+.card-actions {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  gap: 12px;
+}
+
+.btn-link {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-color);
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-link:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.btn-link.demo {
+  color: var(--accent-color);
+}
+
+/* Ajustes Responsive */
+@media (max-width: 600px) {
+  .projects-grid { 
+    grid-template-columns: 1fr; 
+  }
+}

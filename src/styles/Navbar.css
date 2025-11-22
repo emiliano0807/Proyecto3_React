@@ -1,0 +1,101 @@
+@import "../styles/vars.css";
+
+.navbar {
+  width: 100%;
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+  background: rgba(var(--bg-color), 0.9);
+  transition: border-color 0.3s ease;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+}
+.logo-dot { color: var(--accent-color); }
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.2s;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover { color: var(--primary-color); }
+
+/* ESTILOS DEL BOTÓN DE TEMA CORREGIDOS */
+.theme-toggle, .theme-toggle-text {
+  background: transparent;
+  border: 1px solid transparent; /* Invisible por defecto */
+  cursor: pointer;
+  font-size: 0.95rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Espacio entre el sol y el texto */
+  
+  /* ESTA ES LA CLAVE: Forzar el color del tema */
+  color: var(--text-color); 
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.theme-toggle:hover, .theme-toggle-text:hover {
+  background: var(--soft-bg);
+  border-color: var(--border-color);
+}
+
+/* CORRECCIÓN AQUÍ: Ocultamos ambos elementos en escritorio */
+.hamburger, .mobile-theme-li { 
+  display: none; 
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .desktop-theme-action { display: none; }
+  .hamburger { 
+    display: flex; border: none; background: none; cursor: pointer; color: var(--text-color); 
+  }
+  .hamburger .bar { 
+    display: block; width: 25px; height: 3px; background: currentColor; margin: 5px auto; 
+  }
+  
+  .nav-links {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: var(--bg-color);
+    flex-direction: column;
+    padding: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    display: none;
+  }
+  .nav-links.active { display: flex; }
+  
+  .mobile-theme-li { display: block; }
+}

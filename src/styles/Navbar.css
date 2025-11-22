@@ -80,10 +80,27 @@
 @media (max-width: 768px) {
   .desktop-theme-action { display: none; }
   .hamburger { 
-    display: flex; border: none; background: none; cursor: pointer; color: var(--text-color); 
+    
+    display: flex; 
+    flex-direction: column; /* CLAVE: Alinea las barras verticalmente */
+    justify-content: space-between; /* CLAVE: Separa las barras equitativamente */
+    width: 30px; 
+    height: 21px; /* Altura suficiente para que quepan las 3 barras separadas */
+    background: transparent; 
+    border: none; 
+    cursor: pointer; 
+    padding: 0;
+    z-index: 101; /* Asegura que quede por encima del menú desplegado */ 
+    
   }
   .hamburger .bar { 
-    display: block; width: 25px; height: 3px; background: currentColor; margin: 5px auto; 
+    
+    display: block; 
+    width: 100%; 
+    height: 3px; 
+    background: var(--text-color); 
+    border-radius: 3px; /* Bordes redondeados se ven mejor */
+    transition: all 0.3s ease-in-out; /* Suavidad para la animación */
   }
   
   .nav-links {
